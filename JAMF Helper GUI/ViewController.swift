@@ -49,6 +49,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var IconFileName: NSTextField!
     @IBOutlet weak var CountdownText: NSTextField!
     @IBOutlet weak var CountdownAlignment: NSPopUpButton!
+    @IBOutlet weak var SelectIconButton: NSButton!
     
     let jamfHelperPath = "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
     var icon: String = ""
@@ -218,9 +219,10 @@ class ViewController: NSViewController {
     
     // Get the path to the image to use as an icon
     @IBAction func SelectIcon(sender: NSButton) {
-        
-        getFilePath()
-        
+        if let path = getIconPath() {
+            self.icon = path
+            self.IconFileName.stringValue = path
+        }
     }
     
     // Asynchronously launch JAMF Helper window
@@ -247,14 +249,14 @@ class ViewController: NSViewController {
         
         if WindowTypeSelected() == true {
             
-            let user_directory = NSHomeDirectory() + "/Desktop"
-            let file_name = "JAMFHelperGUI"
-            let file_extension = ".sh"
-            let shebang = "#!/bin/bash"
-            let path = user_directory + "/" + file_name + "-" + printTimestamp() + file_extension
-            let script_string = helperArgumentsToString().joinWithSeparator(" ")
-            let script_output = shebang + "\n" + "\"" + jamfHelperPath + "\" " + script_string
-            try! script_output.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding)
+            if let path = getScriptPath() {
+                let shebang = "#!/bin/bash"
+                let script_string = helperArgumentsToString().joinWithSeparator(" ")
+                let script_output = shebang + "\n" + "\"" + jamfHelperPath + "\" " + script_string
+                try! script_output.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding)
+            } else {
+                displayAlert("Warning!", button: "OK", body: "A valid path was not specified to save the script. Please choose a valid path and try again.")
+            }
             
         } else {
             
@@ -288,38 +290,29 @@ class ViewController: NSViewController {
     }
     
     // Opens a Finder file select dialog window
-    func getFilePath() {
+    func getIconPath()-> String? {
         
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         openPanel.canCreateDirectories = true
         openPanel.canChooseFiles = true
+
+        openPanel.runModal()
         
-        openPanel.beginWithCompletionHandler { (result) -> Void in
-            
-            if result == NSFileHandlingPanelOKButton {
-                
-                self.icon = openPanel.URL!.path!
-                self.IconFileName.stringValue = openPanel.URL!.lastPathComponent!
-                self.enableIconSize()
-                
-                if self.WindowType.indexOfSelectedItem == 3 {
-                    
-                    for var segment = 0; segment < self.FullScreenIcon.segmentCount; ++segment {
-                        
-                        self.FullScreenIcon.setEnabled(true, forSegment: segment)
-                        
-                    }
-                }
-                
-            } else {
-                
-                self.icon = ""
-                self.IconFileName.stringValue = ""
-                
-            }
-        }
+        return openPanel.URL?.path
+        
+    }
+    
+    func getScriptPath()-> String? {
+
+        let panel = NSSavePanel()
+        panel.title = "Choose where to save JAMF Helper script"
+        panel.nameFieldLabel = "Name: "
+        panel.showsTagField = false
+        panel.runModal()
+        
+        return panel.URL?.path
         
     }
     
@@ -410,6 +403,10 @@ class ViewController: NSViewController {
         inputs = inputs.filter { $0[1] != "\"\"" }
 
         for (index, arg_array) in inputs.enumerate() {
+            
+            if (arg_array[0] == "-windowType" && arg_array[1] == "fullscreen") {
+                inputs[index][1] = "fs"
+            }
             
             // Get the first letter from each word for window position
             if arg_array[0] == "-windowPosition" {

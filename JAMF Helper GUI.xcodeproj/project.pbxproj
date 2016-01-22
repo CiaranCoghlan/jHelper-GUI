@@ -35,8 +35,8 @@
 		C4271EA51B69D67400050FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4271EA61B69D67400050FB0 /* JAMF Helper GUI Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JAMF Helper GUI Tests.swift"; sourceTree = "<group>"; };
 		C44FBBB51BFCC5A40057BD9A /* manageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = manageControls.swift; sourceTree = "<group>"; };
-		C46F2E121BFEF4E200269E91 /* JAMF Helper GUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JAMF Helper GUI.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4D311511BFED4B000AC971F /* JAMF Helper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JAMF Helper GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C46F2E121BFEF4E200269E91 /* JAMF Helper GUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "JAMF Helper GUI.xctest"; path = "/Users/jordanwisniewski/Documents/JAMF Helper GUI/build/Debug/JAMF Helper GUI.xctest"; sourceTree = "<absolute>"; };
+		C4D311511BFED4B000AC971F /* JAMF Helper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "JAMF Helper GUI.app"; path = "/Users/jordanwisniewski/Documents/JAMF Helper GUI/build/Debug/JAMF Helper GUI.app"; sourceTree = "<absolute>"; };
 		C4F7426F1B7A389200866497 /* httpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,8 +63,6 @@
 			children = (
 				C4271E901B69D67400050FB0 /* JAMF Helper GUI */,
 				C4271EA31B69D67400050FB0 /* JAMF Helper GUI Tests */,
-				C4D311511BFED4B000AC971F /* JAMF Helper GUI.app */,
-				C46F2E121BFEF4E200269E91 /* JAMF Helper GUI.xctest */,
 			);
 			sourceTree = "<group>";
 		};

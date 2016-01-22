@@ -77,12 +77,14 @@ public class httpRequest: NSObject {
         let message = "Status: " + String(statusCode) + "\n" + "Request was "
         
         if statusCode == 201 {
-            
-            ViewController().displayAlert("HTTP Request", button: "OK", body: message + "Successful.")
+            dispatch_async(dispatch_get_main_queue(),{
+                ViewController().displayAlert("HTTP Request", button: "OK", body: message + "Successful.")
+            })
             
         } else {
-            
-            ViewController().displayAlert("HTTP Request", button: "OK", body: message + "Unsuccessful")
+            dispatch_async(dispatch_get_main_queue(),{
+                ViewController().displayAlert("HTTP Request", button: "OK", body: message + "Unsuccessful")
+            })
             
         }
     }

@@ -970,7 +970,7 @@
                                             <rect key="frame" x="223" y="60" width="40" height="32"/>
                                             <animations/>
                                             <buttonCell key="cell" type="push" bezelStyle="rounded" alignment="center" lineBreakMode="charWrapping" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="krP-Wf-edb">
-                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
                                                 <font key="font" metaFont="system"/>
                                             </buttonCell>
                                             <connections>
@@ -1439,6 +1439,7 @@
                         <outlet property="LockHUD" destination="1so-p2-ZvK" id="7BB-7n-wKx"/>
                         <outlet property="MainLogo" destination="AR1-N5-Fy8" id="qJd-wf-3W3"/>
                         <outlet property="ScriptName" destination="FPD-Qw-PiW" id="vzA-Js-XTz"/>
+                        <outlet property="SelectIconButton" destination="HJA-Kc-NHt" id="HmM-Rb-rga"/>
                         <outlet property="StartLaunchD" destination="uSB-9t-3b2" id="zQ7-qX-xPs"/>
                         <outlet property="WindowCountdown" destination="jf6-Ma-Tgb" id="aI8-Hp-LPP"/>
                         <outlet property="WindowDescription" destination="mON-IH-AKs" id="KLu-1T-ogv"/>
