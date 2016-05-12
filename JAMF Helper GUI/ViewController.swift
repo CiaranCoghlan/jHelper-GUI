@@ -120,7 +120,7 @@ class ViewController: NSViewController {
         // If window type is Fullscreen and no icon is selected
         if window_type == 3 && icon != "" {
             
-            for var segment = 0; segment < FullScreenIcon.segmentCount; ++segment {
+            for segment in 0 ..< FullScreenIcon.segmentCount {
                 
                 FullScreenIcon.setEnabled(true, forSegment: segment)
                 
@@ -149,7 +149,7 @@ class ViewController: NSViewController {
         } else {
             
             // Disable button for fullscreen icon
-            for var segment = 0; segment < FullScreenIcon.segmentCount; ++segment {
+            for segment in 0 ..< FullScreenIcon.segmentCount {
                 
                 FullScreenIcon.setEnabled(false, forSegment: segment)
                 FullScreenIcon.setSelected(false, forSegment: segment)
@@ -212,7 +212,7 @@ class ViewController: NSViewController {
     @IBAction func KillHelper(sender: NSButton) {
         
         dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)) {
-            executeCommand(jamfHelperPath, args: ["-kill"], out: false)
+            self.executeCommand(self.jamfHelperPath, args: ["-kill"], out: false)
         }
         
     }

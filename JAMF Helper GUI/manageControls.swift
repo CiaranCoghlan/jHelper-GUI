@@ -65,7 +65,7 @@ class manageControls: NSObject {
             
             if (dependency_value.characters.count > 0 || dependency2_value.characters.count > 0) {
                 
-                for var segment = 0; segment < segmented_control.segmentCount; ++segment {
+                for segment in 0 ..< segmented_control.segmentCount {
                     
                     segmented_control.setEnabled(true, forSegment: segment)
                     
@@ -73,7 +73,7 @@ class manageControls: NSObject {
                 
             } else {
                 
-                for var segment = 0; segment < segmented_control.segmentCount; ++segment {
+                for segment in 0 ..< segmented_control.segmentCount {
                     
                     segmented_control.setEnabled(false, forSegment: segment)
                     segmented_control.setSelected(false, forSegment: segment)
@@ -85,7 +85,7 @@ class manageControls: NSObject {
             
             if dependency_value.characters.count > 0 {
                 
-                for var segment = 0; segment < segmented_control.segmentCount; ++segment {
+                for segment in 0 ..< segmented_control.segmentCount {
                     
                     segmented_control.setEnabled(true, forSegment: segment)
                     
@@ -93,7 +93,7 @@ class manageControls: NSObject {
                 
             } else {
                 
-                for var segment = 0; segment < segmented_control.segmentCount; ++segment {
+                for segment in 0 ..< segmented_control.segmentCount {
                     
                     segmented_control.setEnabled(false, forSegment: segment)
                     segmented_control.setSelected(false, forSegment: segment)

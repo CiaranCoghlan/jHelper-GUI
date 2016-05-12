@@ -11,20 +11,9 @@
 		C4271E961B69D67400050FB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4271E951B69D67400050FB0 /* ViewController.swift */; };
 		C4271E981B69D67400050FB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4271E971B69D67400050FB0 /* Images.xcassets */; };
 		C4271E9B1B69D67400050FB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4271E991B69D67400050FB0 /* Main.storyboard */; };
-		C4271EA71B69D67400050FB0 /* JAMF Helper GUI Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4271EA61B69D67400050FB0 /* JAMF Helper GUI Tests.swift */; };
-		C44FBBB61BFCC5A40057BD9A /* manageControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FBBB51BFCC5A40057BD9A /* manageControls.swift */; settings = {ASSET_TAGS = (); }; };
+		C44FBBB61BFCC5A40057BD9A /* manageControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44FBBB51BFCC5A40057BD9A /* manageControls.swift */; };
 		C4F742701B7A389200866497 /* httpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7426F1B7A389200866497 /* httpRequest.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C4271EA11B69D67400050FB0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4271E861B69D67400050FB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C4271E8D1B69D67400050FB0;
-			remoteInfo = HelperHelper;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C4271E921B69D67400050FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,23 +21,13 @@
 		C4271E951B69D67400050FB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4271E971B69D67400050FB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4271E9A1B69D67400050FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C4271EA51B69D67400050FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C4271EA61B69D67400050FB0 /* JAMF Helper GUI Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JAMF Helper GUI Tests.swift"; sourceTree = "<group>"; };
+		C433E0711CE4C89300A13D39 /* JAMF Helper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "JAMF Helper GUI.app"; path = "/Users/jordanwisniewski/Development/Swift/JAMF Helper GUI/Git/JAMF-Helper-GUI/build/Debug/JAMF Helper GUI.app"; sourceTree = "<absolute>"; };
 		C44FBBB51BFCC5A40057BD9A /* manageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = manageControls.swift; sourceTree = "<group>"; };
-		C46F2E121BFEF4E200269E91 /* JAMF Helper GUI.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "JAMF Helper GUI.xctest"; path = "/Users/jordanwisniewski/Documents/JAMF Helper GUI/build/Debug/JAMF Helper GUI.xctest"; sourceTree = "<absolute>"; };
-		C4D311511BFED4B000AC971F /* JAMF Helper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "JAMF Helper GUI.app"; path = "/Users/jordanwisniewski/Documents/JAMF Helper GUI/build/Debug/JAMF Helper GUI.app"; sourceTree = "<absolute>"; };
 		C4F7426F1B7A389200866497 /* httpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C4271E8B1B69D67400050FB0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4271E9D1B69D67400050FB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				C4271E901B69D67400050FB0 /* JAMF Helper GUI */,
-				C4271EA31B69D67400050FB0 /* JAMF Helper GUI Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,23 +66,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C4271EA31B69D67400050FB0 /* JAMF Helper GUI Tests */ = {
-			isa = PBXGroup;
-			children = (
-				C4271EA61B69D67400050FB0 /* JAMF Helper GUI Tests.swift */,
-				C4271EA41B69D67400050FB0 /* Supporting Files */,
-			);
-			path = "JAMF Helper GUI Tests";
-			sourceTree = "<group>";
-		};
-		C4271EA41B69D67400050FB0 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C4271EA51B69D67400050FB0 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,26 +83,8 @@
 			);
 			name = "JAMF Helper GUI";
 			productName = HelperHelper;
-			productReference = C4D311511BFED4B000AC971F /* JAMF Helper GUI.app */;
+			productReference = C433E0711CE4C89300A13D39 /* JAMF Helper GUI.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C4271E9F1B69D67400050FB0 /* JAMF Helper GUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C4271EAD1B69D67400050FB0 /* Build configuration list for PBXNativeTarget "JAMF Helper GUITests" */;
-			buildPhases = (
-				C4271E9C1B69D67400050FB0 /* Sources */,
-				C4271E9D1B69D67400050FB0 /* Frameworks */,
-				C4271E9E1B69D67400050FB0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C4271EA21B69D67400050FB0 /* PBXTargetDependency */,
-			);
-			name = "JAMF Helper GUITests";
-			productName = HelperHelperTests;
-			productReference = C46F2E121BFEF4E200269E91 /* JAMF Helper GUI.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,10 +98,6 @@
 				TargetAttributes = {
 					C4271E8D1B69D67400050FB0 = {
 						CreatedOnToolsVersion = 6.4;
-					};
-					C4271E9F1B69D67400050FB0 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = C4271E8D1B69D67400050FB0;
 					};
 				};
 			};
@@ -176,7 +115,6 @@
 			projectRoot = "";
 			targets = (
 				C4271E8D1B69D67400050FB0 /* JAMF Helper GUI */,
-				C4271E9F1B69D67400050FB0 /* JAMF Helper GUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -188,13 +126,6 @@
 			files = (
 				C4271E981B69D67400050FB0 /* Images.xcassets in Resources */,
 				C4271E9B1B69D67400050FB0 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C4271E9E1B69D67400050FB0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,23 +143,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4271E9C1B69D67400050FB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4271EA71B69D67400050FB0 /* JAMF Helper GUI Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C4271EA21B69D67400050FB0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C4271E8D1B69D67400050FB0 /* JAMF Helper GUI */;
-			targetProxy = C4271EA11B69D67400050FB0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C4271E991B69D67400050FB0 /* Main.storyboard */ = {
@@ -347,44 +262,6 @@
 			};
 			name = Release;
 		};
-		C4271EAE1B69D67400050FB0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "JAMF Helper GUI Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jordan.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "JAMF Helper GUI";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JAMF Helper GUI.app/Contents/MacOS/JAMF Helper GUI";
-			};
-			name = Debug;
-		};
-		C4271EAF1B69D67400050FB0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "JAMF Helper GUI Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jordan.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "JAMF Helper GUI";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JAMF Helper GUI.app/Contents/MacOS/JAMF Helper GUI";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -402,15 +279,6 @@
 			buildConfigurations = (
 				C4271EAB1B69D67400050FB0 /* Debug */,
 				C4271EAC1B69D67400050FB0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C4271EAD1B69D67400050FB0 /* Build configuration list for PBXNativeTarget "JAMF Helper GUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C4271EAE1B69D67400050FB0 /* Debug */,
-				C4271EAF1B69D67400050FB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
