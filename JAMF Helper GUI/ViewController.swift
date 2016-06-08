@@ -391,7 +391,7 @@ class ViewController: NSViewController {
             ["-alignCountdown", CountdownAlignment.titleOfSelectedItem!.lowercaseString],
             ["-lockHUD", String(LockHUD.selectedSegment) ],
             ["-startlaunchD", String(StartLaunchD.selectedSegment)],
-            ["-showDelayOptions", DelayOptions.stringValue]]
+            ["-showDelayOptions", "\"" + DelayOptions.stringValue + "\""]]
         
         // Remove all empty values
         inputs = inputs.filter { $0[1].isEmpty == false }
