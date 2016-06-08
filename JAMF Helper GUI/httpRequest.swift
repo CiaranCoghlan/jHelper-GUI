@@ -18,7 +18,7 @@
 
 import Cocoa
 
-public class httpRequest: NSObject {
+public class httpRequest: NSObject, NSURLSessionDelegate {
     
     func post(url: String, user: String, password: String, data: String){
         
@@ -42,7 +42,7 @@ public class httpRequest: NSObject {
         configuration.HTTPAdditionalHeaders = ["Authorization" : "Basic \(base64_credentials)", "Content-Type" : "text/xml"]
         
         //Initialize a NSURL session
-        let session = NSURLSession(configuration: configuration)
+        let session = NSURLSession(configuration: configuration, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
         
         //Create the task with the request, and prepare to log result/errors to console
         let task = session.dataTaskWithRequest(request){
@@ -89,7 +89,7 @@ public class httpRequest: NSObject {
         }
     }
     
-    func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential!) -> Void) {
+    public func URLSession(session: NSURLSession, didReceiveChallenge challenge: NSURLAuthenticationChallenge, completionHandler: (NSURLSessionAuthChallengeDisposition, NSURLCredential?) -> Void) {
         
         completionHandler(NSURLSessionAuthChallengeDisposition.UseCredential, NSURLCredential(forTrust: challenge.protectionSpace.serverTrust!))
         
