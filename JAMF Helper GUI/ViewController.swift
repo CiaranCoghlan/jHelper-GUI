@@ -412,7 +412,12 @@ class ViewController: NSViewController {
             if arg_array[0] == "-windowPosition" {
                 
                 let position_array = arg_array[1].componentsSeparatedByString(" ")
-                let position_short = String(position_array[0]).substringToIndex(String(position_array[0]).startIndex.advancedBy(1)) + String(position_array[1]).substringToIndex(String(position_array[1]).startIndex.advancedBy(1))
+                var position_short = ""
+                
+                for word in position_array {
+                    position_short += String(word).substringToIndex(String(word).startIndex.advancedBy(1))
+                }
+
                 inputs[index][1] = position_short
                 
             }

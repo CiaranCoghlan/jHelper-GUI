@@ -22,7 +22,7 @@
 		C4271E971B69D67400050FB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C4271E9A1B69D67400050FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C44FBBB51BFCC5A40057BD9A /* manageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = manageControls.swift; sourceTree = "<group>"; };
-		C4C578251D08BCBC00BF0F34 /* JAMF Helper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "JAMF Helper GUI.app"; path = "/Users/jordanwisniewski/Development/Swift/JAMF Helper GUI/build/Debug/JAMF Helper GUI.app"; sourceTree = "<absolute>"; };
+		C4B329C81D77433600993A3F /* JAMF Helper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "JAMF Helper GUI.app"; path = "/Users/jordanwisniewski/Documents/JAMF Helper GUI/build/Debug/JAMF Helper GUI.app"; sourceTree = "<absolute>"; };
 		C4F7426F1B7A389200866497 /* httpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = httpRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +83,7 @@
 			);
 			name = "JAMF Helper GUI";
 			productName = HelperHelper;
-			productReference = C4C578251D08BCBC00BF0F34 /* JAMF Helper GUI.app */;
+			productReference = C4B329C81D77433600993A3F /* JAMF Helper GUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
