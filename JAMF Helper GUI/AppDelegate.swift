@@ -1,7 +1,6 @@
 //
 //  AppDelegate.swift
 //  JAMF Helper GUI
-//
 //  Created by Jordan Wisniewski on 7/29/15.
 //
 //  Copyright (C) 2015, JAMF Software, LLC All rights reserved.

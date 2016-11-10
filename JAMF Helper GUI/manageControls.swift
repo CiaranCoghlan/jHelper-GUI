@@ -1,7 +1,6 @@
 //
 //  manageControls.swift
 //  JAMF Helper GUI
-//
 //  Created by Jordan Wisniewski on 11/18/15.
 //
 //  Copyright (C) 2015, JAMF Software, LLC All rights reserved.

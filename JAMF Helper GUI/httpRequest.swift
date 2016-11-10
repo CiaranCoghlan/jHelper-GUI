@@ -1,7 +1,6 @@
 //
 //  RequestAPI.swift
 //  JAMF Helper GUI
-//
 //  Created by Jordan Wisniewski on 8/11/15.
 //
 //  Copyright (C) 2015, JAMF Software, LLC All rights reserved.
