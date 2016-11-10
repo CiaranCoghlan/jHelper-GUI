@@ -1,10 +1,11 @@
 //
+//
 //  AppDelegate.swift
 //  JAMF Helper GUI
 //
-//  Created by Jordan Wisniewski on 7/29/15.
+//  Created by Jordan Wisniewski on 9/29/15.
 //
-//  Copyright (C) 2015, JAMF Software, LLC All rights reserved.
+//  Copyright (C) 2016, JAMF Software, LLC All rights reserved.
 //
 //  THIS SOFTWARE IS PROVIDED BY JAMF SOFTWARE, LLC "AS IS" AND ANY EXPRESS OR IMPLIED
 //  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
@@ -21,36 +22,38 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     
     // Respond to Help menu item being clicked
-    @IBAction func showHelp (sender: NSMenuItem) {
+    @IBAction func showHelp (_ sender: NSMenuItem) {
         displayHelp()
     }
     
     // Create an alert with the output of "jamfhelper -help"
-    func displayHelp() {
+    private func displayHelp() {
         let jamfHelperPath = "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
-        let view = ViewController()
+        let help = HelperUtils.executeCommand(jamfHelperPath, args: ["-help"], out: true)
         
-        let help = view.executeCommand(jamfHelperPath, args: ["-help"], out: true)
-        let frame = NSRect(x: 0,y: 0,width: 600,height: 400)
-        
-        let textView = NSTextView()
-        textView.frame = frame
-        textView.string = help!
-        
-        let scrollView = NSScrollView()
-        scrollView.frame = frame
-        scrollView.documentView = textView
-        
-        view.displayAlert("JAMF Helper Help", button: "OK", body: scrollView)
+        if let help = help {
+            let frame = NSRect(x: 0,y: 0,width: 600,height: 400)
+            let textView = NSTextView()
+            textView.frame = frame
+            textView.string = help
+            
+            let scrollView = NSScrollView()
+            scrollView.frame = frame
+            scrollView.documentView = textView
+            
+            HelperUtils.displayAlert("Jamf Helper Help", scrollView: scrollView)
+        } else {
+            HelperUtils.displayAlert("Jamf Helper Help", string: "There was an error loading the Jamf Helper help page")
+        }
     }
 
 

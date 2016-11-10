@@ -1,10 +1,10 @@
 //
-//  manageControls.swift
+//  ManageControls.swift
 //  JAMF Helper GUI
 //
-//  Created by Jordan Wisniewski on 11/18/15.
+//  Created by Jordan Wisniewski on 9/29/15.
 //
-//  Copyright (C) 2015, JAMF Software, LLC All rights reserved.
+//  Copyright (C) 2016, JAMF Software, LLC All rights reserved.
 //
 //  THIS SOFTWARE IS PROVIDED BY JAMF SOFTWARE, LLC "AS IS" AND ANY EXPRESS OR IMPLIED
 //  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
@@ -18,25 +18,25 @@
 
 import Cocoa
 
-class manageControls: NSObject {
+class ManageControls: NSObject {
     
     // Enable the popup button if the dependency has text entered
-    func popupButton(popup_button_control: NSPopUpButton, dependency: AnyObject) {
+    func popupButton(_ popup_button_control: NSPopUpButton, dependency: AnyObject) {
         
         if dependency.stringValue.characters.count > 0 {
             
-            popup_button_control.enabled = true
+            popup_button_control.isEnabled = true
             
         } else {
             
-            popup_button_control.enabled = false
-            popup_button_control.selectItemAtIndex(0)
+            popup_button_control.isEnabled = false
+            popup_button_control.selectItem(at: 0)
             
         }
     }
     
     // Enable the segmented control if the dependency has text entered or a selection made
-    func segmentedControl(segmented_control: NSSegmentedControl, dependency: AnyObject, dependency2: AnyObject?) {
+    func segmentedControl(_ segmented_control: NSSegmentedControl, dependency: AnyObject, dependency2: AnyObject?) {
         
         var dependency_value: String = ""
         var dependency2_value: String = ""

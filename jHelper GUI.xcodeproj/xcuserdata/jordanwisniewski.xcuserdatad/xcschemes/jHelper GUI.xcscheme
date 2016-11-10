@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4271E8D1B69D67400050FB0"
-               BuildableName = "JAMF Helper GUI.app"
-               BlueprintName = "JAMF Helper GUI"
-               ReferencedContainer = "container:JAMF Helper GUI.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4271E9F1B69D67400050FB0"
-               BuildableName = "JAMF Helper GUI.xctest"
-               BlueprintName = "JAMF Helper GUITests"
-               ReferencedContainer = "container:JAMF Helper GUI.xcodeproj">
+               BlueprintIdentifier = "C41685141DD4F11C00C389DD"
+               BuildableName = "jHelper GUI.app"
+               BlueprintName = "jHelper GUI"
+               ReferencedContainer = "container:jHelper GUI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C4271E9F1B69D67400050FB0"
-               BuildableName = "JAMF Helper GUI.xctest"
-               BlueprintName = "JAMF Helper GUITests"
-               ReferencedContainer = "container:JAMF Helper GUI.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4271E8D1B69D67400050FB0"
-            BuildableName = "JAMF Helper GUI.app"
-            BlueprintName = "JAMF Helper GUI"
-            ReferencedContainer = "container:JAMF Helper GUI.xcodeproj">
+            BlueprintIdentifier = "C41685141DD4F11C00C389DD"
+            BuildableName = "jHelper GUI.app"
+            BlueprintName = "jHelper GUI"
+            ReferencedContainer = "container:jHelper GUI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -79,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4271E8D1B69D67400050FB0"
-            BuildableName = "JAMF Helper GUI.app"
-            BlueprintName = "JAMF Helper GUI"
-            ReferencedContainer = "container:JAMF Helper GUI.xcodeproj">
+            BlueprintIdentifier = "C41685141DD4F11C00C389DD"
+            BuildableName = "jHelper GUI.app"
+            BlueprintName = "jHelper GUI"
+            ReferencedContainer = "container:jHelper GUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -98,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C4271E8D1B69D67400050FB0"
-            BuildableName = "JAMF Helper GUI.app"
-            BlueprintName = "JAMF Helper GUI"
-            ReferencedContainer = "container:JAMF Helper GUI.xcodeproj">
+            BlueprintIdentifier = "C41685141DD4F11C00C389DD"
+            BuildableName = "jHelper GUI.app"
+            BlueprintName = "jHelper GUI"
+            ReferencedContainer = "container:jHelper GUI.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>JAMF Helper GUI.xcscheme</key>
+		<key>jHelper GUI.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,12 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>C4271E8D1B69D67400050FB0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C4271E9F1B69D67400050FB0</key>
+		<key>C41685141DD4F11C00C389DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

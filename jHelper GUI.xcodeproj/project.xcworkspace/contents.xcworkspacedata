@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/jordanwisniewski/Development/Swift/JAMF Helper GUI/JAMF Helper GUI.xcodeproj">
+      location = "self:jHelper GUI.xcodeproj">
    </FileRef>
 </Workspace>

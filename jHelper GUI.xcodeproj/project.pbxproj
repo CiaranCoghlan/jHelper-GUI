@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C41685191DD4F11C00C389DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685181DD4F11C00C389DD /* AppDelegate.swift */; };
+		C416851D1DD4F11C00C389DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C416851C1DD4F11C00C389DD /* Assets.xcassets */; };
+		C41685201DD4F11C00C389DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C416851E1DD4F11C00C389DD /* Main.storyboard */; };
+		C416852F1DD4F40900C389DD /* HelperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C416852E1DD4F40900C389DD /* HelperController.swift */; };
+		C41685331DD4F42100C389DD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685301DD4F42100C389DD /* HttpRequest.swift */; };
+		C41685341DD4F42100C389DD /* ManageControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685311DD4F42100C389DD /* ManageControls.swift */; };
+		C41685351DD4F42100C389DD /* HelperUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685321DD4F42100C389DD /* HelperUtils.swift */; };
+		C41685371DD4F47400C389DD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685361DD4F47400C389DD /* Helper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C41685151DD4F11C00C389DD /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/Swift/jHelper GUI/build/Debug/jHelper GUI.app"; sourceTree = "<absolute>"; };
+		C41685181DD4F11C00C389DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C416851C1DD4F11C00C389DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C416851F1DD4F11C00C389DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C41685211DD4F11C00C389DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C416852E1DD4F40900C389DD /* HelperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperController.swift; path = GUI/HelperController.swift; sourceTree = "<group>"; };
+		C41685301DD4F42100C389DD /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HttpRequest.swift; path = Utils/HttpRequest.swift; sourceTree = "<group>"; };
+		C41685311DD4F42100C389DD /* ManageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageControls.swift; path = Utils/ManageControls.swift; sourceTree = "<group>"; };
+		C41685321DD4F42100C389DD /* HelperUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperUtils.swift; path = Utils/HelperUtils.swift; sourceTree = "<group>"; };
+		C41685361DD4F47400C389DD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C41685121DD4F11C00C389DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C416850C1DD4F11C00C389DD = {
+			isa = PBXGroup;
+			children = (
+				C41685171DD4F11C00C389DD /* jHelper GUI */,
+			);
+			sourceTree = "<group>";
+		};
+		C41685171DD4F11C00C389DD /* jHelper GUI */ = {
+			isa = PBXGroup;
+			children = (
+				C41685361DD4F47400C389DD /* Helper.swift */,
+				C416852D1DD4F3FC00C389DD /* GUI */,
+				C416852B1DD4F3ED00C389DD /* Utils */,
+				C41685181DD4F11C00C389DD /* AppDelegate.swift */,
+				C416851C1DD4F11C00C389DD /* Assets.xcassets */,
+				C416851E1DD4F11C00C389DD /* Main.storyboard */,
+				C41685211DD4F11C00C389DD /* Info.plist */,
+			);
+			path = "jHelper GUI";
+			sourceTree = "<group>";
+		};
+		C416852B1DD4F3ED00C389DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C41685301DD4F42100C389DD /* HttpRequest.swift */,
+				C41685311DD4F42100C389DD /* ManageControls.swift */,
+				C41685321DD4F42100C389DD /* HelperUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		C416852D1DD4F3FC00C389DD /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				C416852E1DD4F40900C389DD /* HelperController.swift */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C41685141DD4F11C00C389DD /* jHelper GUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C41685241DD4F11C00C389DD /* Build configuration list for PBXNativeTarget "jHelper GUI" */;
+			buildPhases = (
+				C41685111DD4F11C00C389DD /* Sources */,
+				C41685121DD4F11C00C389DD /* Frameworks */,
+				C41685131DD4F11C00C389DD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "jHelper GUI";
+			productName = "jHelper GUI";
+			productReference = C41685151DD4F11C00C389DD /* jHelper GUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C416850D1DD4F11C00C389DD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = jordanpatrick;
+				TargetAttributes = {
+					C41685141DD4F11C00C389DD = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C41685101DD4F11C00C389DD /* Build configuration list for PBXProject "jHelper GUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C416850C1DD4F11C00C389DD;
+			productRefGroup = C416850C1DD4F11C00C389DD;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C41685141DD4F11C00C389DD /* jHelper GUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C41685131DD4F11C00C389DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C416851D1DD4F11C00C389DD /* Assets.xcassets in Resources */,
+				C41685201DD4F11C00C389DD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C41685111DD4F11C00C389DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C41685341DD4F42100C389DD /* ManageControls.swift in Sources */,
+				C41685191DD4F11C00C389DD /* AppDelegate.swift in Sources */,
+				C41685351DD4F42100C389DD /* HelperUtils.swift in Sources */,
+				C416852F1DD4F40900C389DD /* HelperController.swift in Sources */,
+				C41685331DD4F42100C389DD /* HttpRequest.swift in Sources */,
+				C41685371DD4F47400C389DD /* Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C416851E1DD4F11C00C389DD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C416851F1DD4F11C00C389DD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C41685221DD4F11C00C389DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C41685231DD4F11C00C389DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		C41685251DD4F11C00C389DD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "jHelper GUI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jordanpatrick.jHelper-GUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C41685261DD4F11C00C389DD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "jHelper GUI/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.jordanpatrick.jHelper-GUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C41685101DD4F11C00C389DD /* Build configuration list for PBXProject "jHelper GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41685221DD4F11C00C389DD /* Debug */,
+				C41685231DD4F11C00C389DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C41685241DD4F11C00C389DD /* Build configuration list for PBXNativeTarget "jHelper GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41685251DD4F11C00C389DD /* Debug */,
+				C41685261DD4F11C00C389DD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C416850D1DD4F11C00C389DD /* Project object */;
+}
