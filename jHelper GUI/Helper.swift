@@ -29,7 +29,7 @@ class Helper: NSObject {
     private var descriptionAlign = Argument(name: "-alignDescription")
     private var icon = Argument(name: "-icon")
     private var iconSize = Argument(name: "-iconSize")
-    private var iconFullScreen = Argument(name: "-iconFullScreen")
+    private var iconFullScreen = Argument(name: "-fullScreenIcon")
     private var buttonOne = Argument(name: "-button1")
     private var buttonTwo = Argument(name: "-button2")
     private var buttonDefault = Argument(name: "-defaultButton")
@@ -185,7 +185,8 @@ class Helper: NSObject {
     }
     
     func setIconFullScreen(iconFullScreen: String) {
-        if (iconFullScreen == "1") {
+        print(iconFullScreen)
+        if (iconFullScreen == "0") {
             self.iconFullScreen.value = iconFullScreen
         }
     }

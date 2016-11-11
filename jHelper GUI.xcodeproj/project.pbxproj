@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		C41685191DD4F11C00C389DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685181DD4F11C00C389DD /* AppDelegate.swift */; };
-		C416851D1DD4F11C00C389DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C416851C1DD4F11C00C389DD /* Assets.xcassets */; };
 		C41685201DD4F11C00C389DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C416851E1DD4F11C00C389DD /* Main.storyboard */; };
 		C416852F1DD4F40900C389DD /* HelperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C416852E1DD4F40900C389DD /* HelperController.swift */; };
 		C41685331DD4F42100C389DD /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685301DD4F42100C389DD /* HttpRequest.swift */; };
 		C41685341DD4F42100C389DD /* ManageControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685311DD4F42100C389DD /* ManageControls.swift */; };
 		C41685351DD4F42100C389DD /* HelperUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685321DD4F42100C389DD /* HelperUtils.swift */; };
 		C41685371DD4F47400C389DD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685361DD4F47400C389DD /* Helper.swift */; };
+		C4E937481DD675B300503C85 /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E937471DD675B300503C85 /* AppIcons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C41685151DD4F11C00C389DD /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/Swift/jHelper GUI/build/Debug/jHelper GUI.app"; sourceTree = "<absolute>"; };
 		C41685181DD4F11C00C389DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C416851C1DD4F11C00C389DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C416851F1DD4F11C00C389DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C41685211DD4F11C00C389DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C416852E1DD4F40900C389DD /* HelperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperController.swift; path = GUI/HelperController.swift; sourceTree = "<group>"; };
@@ -28,6 +26,8 @@
 		C41685311DD4F42100C389DD /* ManageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageControls.swift; path = Utils/ManageControls.swift; sourceTree = "<group>"; };
 		C41685321DD4F42100C389DD /* HelperUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperUtils.swift; path = Utils/HelperUtils.swift; sourceTree = "<group>"; };
 		C41685361DD4F47400C389DD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C4E937441DD63E7600503C85 /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/jHelper-GUI/build/Release/jHelper GUI.app"; sourceTree = "<absolute>"; };
+		C4E937471DD675B300503C85 /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +55,9 @@
 				C416852D1DD4F3FC00C389DD /* GUI */,
 				C416852B1DD4F3ED00C389DD /* Utils */,
 				C41685181DD4F11C00C389DD /* AppDelegate.swift */,
-				C416851C1DD4F11C00C389DD /* Assets.xcassets */,
 				C416851E1DD4F11C00C389DD /* Main.storyboard */,
 				C41685211DD4F11C00C389DD /* Info.plist */,
+				C4E937471DD675B300503C85 /* AppIcons.xcassets */,
 			);
 			path = "jHelper GUI";
 			sourceTree = "<group>";
@@ -97,7 +97,7 @@
 			);
 			name = "jHelper GUI";
 			productName = "jHelper GUI";
-			productReference = C41685151DD4F11C00C389DD /* jHelper GUI.app */;
+			productReference = C4E937441DD63E7600503C85 /* jHelper GUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -139,8 +139,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C416851D1DD4F11C00C389DD /* Assets.xcassets in Resources */,
 				C41685201DD4F11C00C389DD /* Main.storyboard in Resources */,
+				C4E937481DD675B300503C85 /* AppIcons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -257,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -309,6 +309,7 @@
 				C41685261DD4F11C00C389DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
