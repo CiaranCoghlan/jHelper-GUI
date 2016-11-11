@@ -112,7 +112,7 @@ class HelperController: NSViewController {
         let scriptHeader = "#!/bin/bash\n\"" + jamfHelperPath + "\" "
         let argumentString = scriptHeader + self.processInputs().joined(separator: " ")
         let scriptName = ScriptName.stringValue
-        let script_xml = HelperUtils.getScriptXml(name: " ", data: argumentString)
+        let script_xml = HelperUtils.getScriptXml(name: scriptName, data: argumentString)
         let request = HttpRequest()
         request.post(jssURL.stringValue + scriptsUri, user: jssUser.stringValue, password: jssPass.stringValue, data: script_xml)
     }
@@ -159,7 +159,7 @@ class HelperController: NSViewController {
     
     override func viewWillAppear() {
         let blue = NSColor(red: 91/255.0, green: 105/255.0, blue: 130/255.0, alpha: 1.0)
-        let darkBlue = NSColor(red: 44/255.0, green: 58/255.0, blue: 82/255.0, alpha: 1.0)
+        //let darkBlue = NSColor(red: 44/255.0, green: 58/255.0, blue: 82/255.0, alpha: 1.0)
         //let white = NSColor(red: 244/255.0, green: 246/255.0, blue: 249/255.0, alpha: 1.0)
         //let lightBlue = NSColor(red: 158/255.0, green: 184/255.0, blue: 213/255.0, alpha: 1.0)
         self.view.layer?.backgroundColor = blue.cgColor

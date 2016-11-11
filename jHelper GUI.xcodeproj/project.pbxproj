@@ -14,7 +14,6 @@
 		C41685341DD4F42100C389DD /* ManageControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685311DD4F42100C389DD /* ManageControls.swift */; };
 		C41685351DD4F42100C389DD /* HelperUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685321DD4F42100C389DD /* HelperUtils.swift */; };
 		C41685371DD4F47400C389DD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41685361DD4F47400C389DD /* Helper.swift */; };
-		C4E937481DD675B300503C85 /* AppIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E937471DD675B300503C85 /* AppIcons.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +25,7 @@
 		C41685311DD4F42100C389DD /* ManageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageControls.swift; path = Utils/ManageControls.swift; sourceTree = "<group>"; };
 		C41685321DD4F42100C389DD /* HelperUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperUtils.swift; path = Utils/HelperUtils.swift; sourceTree = "<group>"; };
 		C41685361DD4F47400C389DD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		C4E937441DD63E7600503C85 /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/jHelper-GUI/build/Release/jHelper GUI.app"; sourceTree = "<absolute>"; };
-		C4E937471DD675B300503C85 /* AppIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcons.xcassets; sourceTree = "<group>"; };
+		C452BFF01DD6799700EB9525 /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/jHelper-GUI/build/Debug/jHelper GUI.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +55,6 @@
 				C41685181DD4F11C00C389DD /* AppDelegate.swift */,
 				C416851E1DD4F11C00C389DD /* Main.storyboard */,
 				C41685211DD4F11C00C389DD /* Info.plist */,
-				C4E937471DD675B300503C85 /* AppIcons.xcassets */,
 			);
 			path = "jHelper GUI";
 			sourceTree = "<group>";
@@ -97,7 +94,7 @@
 			);
 			name = "jHelper GUI";
 			productName = "jHelper GUI";
-			productReference = C4E937441DD63E7600503C85 /* jHelper GUI.app */;
+			productReference = C452BFF01DD6799700EB9525 /* jHelper GUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,7 +137,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C41685201DD4F11C00C389DD /* Main.storyboard in Resources */,
-				C4E937481DD675B300503C85 /* AppIcons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +263,6 @@
 		C41685251DD4F11C00C389DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "jHelper GUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -280,7 +275,6 @@
 		C41685261DD4F11C00C389DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "jHelper GUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
