@@ -36,9 +36,9 @@ class Helper: NSObject {
     private var buttonCancel = Argument(name: "-cancelButton")
     private var timeout = Argument(name: "-timeout")
     private var countdown = Argument(name: "-countdown")
-    private var countdownPrompt = Argument(name: "-countDownPrompt")
-    private var countdownAlign = Argument(name: "-alignCountDown")
-    private var lockHud = Argument(name: "-lockHud")
+    private var countdownPrompt = Argument(name: "-countdownPrompt")
+    private var countdownAlign = Argument(name: "-alignCountdown")
+    private var lockHud = Argument(name: "-lockHUD")
     private var startLaunchD = Argument(name: "-startLaunchD")
     private var showDelayOptions = Argument(name: "-showDelayOptions")
     
@@ -185,7 +185,6 @@ class Helper: NSObject {
     }
     
     func setIconFullScreen(iconFullScreen: String) {
-        print(iconFullScreen)
         if (iconFullScreen == "0") {
             self.iconFullScreen.value = iconFullScreen
         }
@@ -212,6 +211,7 @@ class Helper: NSObject {
     }
     
     func setDefaultButton(buttonDefault: String) {
+        print(buttonDefault)
         self.buttonDefault.value = HelperUtils.setValidSelectionValue(value: buttonDefault)
     }
     
@@ -262,9 +262,7 @@ class Helper: NSObject {
     }
     
     func setLockHud(lockHud: String) {
-        if ( lockHud == "1") {
-            self.lockHud.value = lockHud
-        }
+        self.lockHud.value = HelperUtils.setValidSelectionValue(value: lockHud)
     }
     
     func getStartLaunchD()->String {

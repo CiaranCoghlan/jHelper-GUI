@@ -26,8 +26,8 @@
 		C41685311DD4F42100C389DD /* ManageControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageControls.swift; path = Utils/ManageControls.swift; sourceTree = "<group>"; };
 		C41685321DD4F42100C389DD /* HelperUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperUtils.swift; path = Utils/HelperUtils.swift; sourceTree = "<group>"; };
 		C41685361DD4F47400C389DD /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		C452BFF01DD6799700EB9525 /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/jHelper-GUI/build/Debug/jHelper GUI.app"; sourceTree = "<absolute>"; };
 		C452BFF91DD67E7D00EB9525 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C4D7CA4F1DD81BF000B47083 /* jHelper GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "jHelper GUI.app"; path = "/Users/jordanwisniewski/Development/Swift/jHelper GUI/build/Debug/jHelper GUI.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 			);
 			name = "jHelper GUI";
 			productName = "jHelper GUI";
-			productReference = C452BFF01DD6799700EB9525 /* jHelper GUI.app */;
+			productReference = C4D7CA4F1DD81BF000B47083 /* jHelper GUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

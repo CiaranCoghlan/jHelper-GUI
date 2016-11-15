@@ -19,7 +19,7 @@
 import Cocoa
 import Foundation
 
-class HelperController: NSViewController {
+class HelperController: NSViewController, NSTextFieldDelegate {
     
     // Link controls to View Controller
     @IBOutlet weak var WindowType: NSPopUpButton!
@@ -44,23 +44,14 @@ class HelperController: NSViewController {
     @IBOutlet weak var jssPass: NSSecureTextField!
     @IBOutlet weak var FullScreenIcon: NSSegmentedControl!
     @IBOutlet weak var DelayOptions: NSTextField!
-    @IBOutlet weak var IconFileName: NSTextField!
     @IBOutlet weak var CountdownText: NSTextField!
     @IBOutlet weak var CountdownAlignment: NSPopUpButton!
     @IBOutlet weak var SelectIconButton: NSButton!
-    
-    // Variables for cocoa bindings
-    var bindType: NSString = ""
-    var bindScriptName: NSString = ""
-    var bindJssUrl: NSString = ""
-    var bindJssUser: NSString = ""
-    var bindJssPass: NSString = ""
-    var bindHeading: NSString = ""
-    var bindDescription: NSString = ""
-    var bindButtonOne: NSString = ""
-    var bindButtonTwo: NSString = ""
-    var bindTimeout: NSString = ""
-    var bindCountdown: NSString = ""
+    @IBOutlet weak var IconView: NSImageView!
+    @IBOutlet weak var IconPath: NSTextField!
+    @IBOutlet weak var createScriptButton: NSButton!
+    @IBOutlet weak var launchHelperButton: NSButton!
+    @IBOutlet weak var submitToJssButton: NSButton!
     
     // Static variables
     fileprivate let jamfHelperPath = "/Library/Application Support/JAMF/bin/jamfHelper.app/Contents/MacOS/jamfHelper"
@@ -68,43 +59,37 @@ class HelperController: NSViewController {
     fileprivate let githubUrl = "https://github.com/JAMFSupport/JAMF-Helper-GUI"
     fileprivate let helper = Helper()
 
-    // Enable countdown alignment field if countdown text is entered
-    @IBAction func CountdownTextChanged(_ sender: NSTextField) {
-    }
-    
     // Enable countdown text if countdown button has 'Yes' selected, otherwise disable
-    @IBAction func CountdownButtonChanged(_ sender: NSSegmentedControl) {
-
-    }
-    
-    // Enable countdown button if window timeout value is entered
-    @IBAction func TimeoutChanged(_ sender: NSTextField) {
-
-    }
-    
-    // Enable description alignment if description text is entered
-    @IBAction func DescriptionChanged(_ sender: NSTextField) {
-
+    @IBAction func countdownButtonAction(_ sender: NSSegmentedControl) {
+        if WindowCountdown.selectedSegment == 0 {
+            CountdownText.isEnabled = true
+        } else {
+            CountdownText.isEnabled = false
+            CountdownText.stringValue = ""
+        }
     }
 
-    // Enable heading alignment if heading text is entered
-    @IBAction func HeadingChanged(_ sender: NSTextField) {
-
-    }
-    
-    // Enable default and cancel buttons if button text is entered
-    @IBAction func ButtonFieldChanged(_ sender: NSTextField) {
-
-    }
-    
     // Manage window position, and timeout based on window type selection
     @IBAction func WindowTypeChanged(_ sender: NSPopUpButton) {
-        let windowType = WindowType.indexOfSelectedItem
-        if (windowType == 3 && !IconFileName.stringValue.isEmpty) {
-            enableSegmentedControl(control: FullScreenIcon, enable: true)
-        } else {
-            enableSegmentedControl(control: FullScreenIcon, enable: false)
-        }
+        ManageControls.segmentedControl(LockHUD, dependentPopUp: sender)
+        ManageControls.textField(ScriptName, dependentPopUp: sender)
+        ManageControls.textField(jssURL, dependentPopUp: sender)
+        ManageControls.textField(jssUser, dependentPopUp: sender)
+        ManageControls.textField(jssPass, dependentPopUp: sender)
+        ManageControls.button(createScriptButton, dependentPopUp: sender)
+        ManageControls.segmentedControl(FullScreenIcon, dependentPopUp: sender, popUpIndex: nil, dependentText: IconPath)
+        ManageControls.popUpButton(WindowPosition, dependentPopUp: sender)
+        ManageControls.segmentedControl(LockHUD, dependentPopUp: sender)
+        ManageControls.textField(WindowTitle, dependentPopUp: sender)
+        ManageControls.textField(WindowDescription, dependentPopUp: sender)
+        ManageControls.textField(WindowHeading, dependentPopUp: sender)
+        ManageControls.textField(ButtonOne, dependentPopUp: sender)
+        ManageControls.textField(ButtonTwo, dependentPopUp: sender)
+        ManageControls.button(SelectIconButton, dependentPopUp: sender)
+        ManageControls.textField(WindowTimeout, dependentPopUp: sender)
+        ManageControls.textField(DelayOptions, dependentPopUp: sender)
+        ManageControls.segmentedControl(StartLaunchD, dependentPopUp: sender)
+        ManageControls.button(launchHelperButton, dependentPopUp: sender)
     }
 
     // Submit the script to the JSS
@@ -120,35 +105,36 @@ class HelperController: NSViewController {
     // Execute a JAMF Helper 'kill' command
     @IBAction func KillHelper(_ sender: NSButton) {
         DispatchQueue.global().async {
-            HelperUtils.executeCommand(self.jamfHelperPath, args: ["-kill"], out: false)
+            _ = HelperUtils.executeCommand(self.jamfHelperPath, args: ["-kill"], out: false)
         }
     }
     
     // Get the path to the image to use as an icon
     @IBAction func SelectIcon(_ sender: NSButton) {
         if let path = HelperUtils.openFilePanel() {
-            IconFileName.stringValue = path
+            let icon = NSImage(contentsOf: path)
+            IconPath.stringValue = path.path
+            IconPath.isHidden = false
+            IconPath.isEnabled = true
+            IconView.image = icon
             IconSize.isEnabled = true
-            if (WindowType.indexOfSelectedItem == 3) {
-                enableSegmentedControl(control: FullScreenIcon, enable: true)
-            } else {
-                enableSegmentedControl(control: FullScreenIcon, enable: false)
-            }
+            ManageControls.segmentedControl(FullScreenIcon, dependentPopUp: WindowType, popUpIndex: WindowType.indexOfItem(withTitle: "Fullscreen"), dependentText: IconPath)
         } else {
-            IconSize.isEnabled = false
+            IconPath.isHidden = true
+            IconPath.isEnabled = false
         }
     }
     
     // Asynchronously launch JAMF Helper window
-    @IBAction func LaunchHelper(_ sender: NSButton) {
+    @IBAction func launchJamfHelperAction(_ sender: NSButton) {
         DispatchQueue.global().async {
             print(self.processInputs())
-            HelperUtils.executeCommand(self.jamfHelperPath, args: self.processInputs(), out: false)
+            _ = HelperUtils.executeCommand(self.jamfHelperPath, args: self.processInputs(), out: false)
         }
     }
     
     // Create a script and save to the desktop
-    @IBAction func CreateScript(_ sender: NSButton) {
+    @IBAction func createScriptAction(_ sender: NSButton) {
         let scriptHeader = "#!/bin/bash\n\"" + jamfHelperPath + "\" "
         let argumentString = scriptHeader + self.processInputs().joined(separator: " ")
 
@@ -188,7 +174,7 @@ extension HelperController {
         helper.setHeadingAlignment(headingAlign: HeadingAlignment.titleOfSelectedItem)
         helper.setDescription(descriptionText: WindowDescription.stringValue)
         helper.setDescriptionAlign(descriptionAlign: DescriptionAlignment.titleOfSelectedItem)
-        helper.setIcon(icon: IconFileName.stringValue)
+        helper.setIcon(icon: IconPath.stringValue)
         helper.setIconSize(iconSize: IconSize.stringValue)
         helper.setIconFullScreen(iconFullScreen: String(FullScreenIcon.selectedSegment))
         helper.setButtonOne(buttonOne: ButtonOne.stringValue)
@@ -208,12 +194,24 @@ extension HelperController {
 }
 
 extension HelperController {
-
-    fileprivate func enableSegmentedControl(control: NSSegmentedControl, enable: Bool) {
-        for segment in 0 ..< control.segmentCount {
-            control.setEnabled(enable, forSegment: segment)
-            if (!enable) {
-                control.setSelected(enable, forSegment: segment)
+    override func controlTextDidChange(_ obj: Notification) {
+        if let textField = obj.object as? NSTextField {
+            switch(textField) {
+            case (ButtonOne):
+                ManageControls.segmentedControl(DefaultButton, dependentText: ButtonOne)
+                ManageControls.segmentedControl(CancelButton, dependentText: ButtonOne)
+            case (WindowTimeout):
+                ManageControls.segmentedControl(WindowCountdown, dependentText: WindowTimeout)
+            case (WindowHeading):
+                ManageControls.popUpButton(HeadingAlignment, dependentText: WindowHeading)
+            case (WindowDescription):
+                ManageControls.popUpButton(DescriptionAlignment, dependentText: WindowDescription)
+            case (CountdownText):
+                ManageControls.popUpButton(CountdownAlignment, dependentText: CountdownText)
+            case ScriptName, jssURL, jssUser, jssPass:
+                ManageControls.button(submitToJssButton, dependentTextArray: [ScriptName, jssURL, jssUser, jssPass])
+            default:
+                print("Valid control not found!")
             }
         }
     }

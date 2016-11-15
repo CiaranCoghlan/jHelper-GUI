@@ -80,7 +80,7 @@ class HelperUtils: NSObject {
     }
     
     // Opens a Finder file select dialog window
-    public static func openFilePanel()-> String? {
+    public static func openFilePanel()-> URL? {
         let openPanel = NSOpenPanel()
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
@@ -90,10 +90,10 @@ class HelperUtils: NSObject {
         openPanel.runModal()
         
         if let url = openPanel.url {
-            return url.path
-        } else {
-            return ""
+            return url
         }
+        
+        return nil
     }
     
     public static func savePanel()-> String? {

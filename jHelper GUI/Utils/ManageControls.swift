@@ -20,85 +20,92 @@ import Cocoa
 
 class ManageControls: NSObject {
     
-    // Enable the popup button if the dependency has text entered
-    func popupButton(_ popup_button_control: NSPopUpButton, dependency: AnyObject) {
-        
-        if dependency.stringValue.characters.count > 0 {
-            
-            popup_button_control.isEnabled = true
-            
+    public static func button(_ button: NSButton, dependentPopUp: NSPopUpButton) {
+        if (dependentPopUp.indexOfSelectedItem > 0) {
+            button.isEnabled = true
         } else {
-            
-            popup_button_control.isEnabled = false
-            popup_button_control.selectItem(at: 0)
-            
+            button.isEnabled = false
+        }
+    }
+    
+    public static func button(_ button: NSButton, dependentTextArray: [NSTextField]) {
+        var enable = true
+        for textField in dependentTextArray {
+            if (textField.stringValue.isEmpty) {
+                enable = false
+            }
+        }
+        button.isEnabled = enable
+    }
+
+    // Enable the popup button if the dependency has text entered
+    public static func popUpButton(_ popUpButton: NSPopUpButton, dependentText: NSTextField) {
+        if (dependentText.stringValue.characters.count > 0) {
+            popUpButton.isEnabled = true
+        } else {
+            popUpButton.isEnabled = false
+            popUpButton.selectItem(at: 0)
+        }
+    }
+    
+    public static func popUpButton(_ popUpButton: NSPopUpButton, dependentPopUp: NSPopUpButton) {
+        if (dependentPopUp.indexOfSelectedItem > 0) {
+            popUpButton.isEnabled = true
+        } else {
+            popUpButton.isEnabled = false
+            popUpButton.selectItem(at: 0)
+        }
+    }
+    
+    public static func textField(_ textField: NSTextField, dependentPopUp: NSPopUpButton) {
+        if (dependentPopUp.indexOfSelectedItem > 0) {
+            textField.isEnabled = true
+        } else {
+            textField.stringValue = ""
+            textField.isEnabled = false
+        }
+    }
+    
+    public static func segmentedControl(_ segmentedControl: NSSegmentedControl, dependentText: NSTextField) {
+        if (dependentText.stringValue.characters.count > 0) {
+            enableSegmentedControl(control: segmentedControl, enable: true)
+        } else {
+            enableSegmentedControl(control: segmentedControl, enable: false)
         }
     }
     
     // Enable the segmented control if the dependency has text entered or a selection made
-    func segmentedControl(_ segmented_control: NSSegmentedControl, dependency: AnyObject, dependency2: AnyObject?) {
+    public static func segmentedControl(_ segmentedControl: NSSegmentedControl, dependentPopUp: NSPopUpButton) {
         
-        var dependency_value: String = ""
-        var dependency2_value: String = ""
-        
-        if dependency is NSPopUpButton {
-            
-            dependency_value = String(dependency.selectedIndex)
-            
-        } else if dependency is NSTextField {
-            
-            dependency_value = dependency.stringValue
-            
-        }
-        
-        if (dependency2 != nil) {
-            
-            if dependency2 is NSPopUpButton {
-                
-                dependency2_value = String(dependency2!.selectedIndex)
-                
-            } else if dependency2 is NSTextField {
-                
-                dependency2_value = dependency2!.stringValue
-                
-            }
-            
-            if (dependency_value.characters.count > 0 || dependency2_value.characters.count > 0) {
-                
-                for segment in 0 ..< segmented_control.segmentCount {
-                    
-                    segmented_control.setEnabled(true, forSegment: segment)
-                    
-                }
-                
-            } else {
-                
-                for segment in 0 ..< segmented_control.segmentCount {
-                    
-                    segmented_control.setEnabled(false, forSegment: segment)
-                    segmented_control.setSelected(false, forSegment: segment)
-                    
-                }
-            }
-            
+        if (dependentPopUp.indexOfSelectedItem > 0) {
+            enableSegmentedControl(control: segmentedControl, enable: true)
         } else {
-            
-            if dependency_value.characters.count > 0 {
-                
-                for segment in 0 ..< segmented_control.segmentCount {
-                    
-                    segmented_control.setEnabled(true, forSegment: segment)
-                    
-                }
-                
+            enableSegmentedControl(control: segmentedControl, enable: false)
+        }
+    }
+    
+    public static func segmentedControl(_ segmentedControl: NSSegmentedControl, dependentPopUp: NSPopUpButton, popUpIndex: Int?, dependentText: NSTextField) {
+        
+        if let index = popUpIndex {
+            if (dependentPopUp.indexOfSelectedItem == index && dependentText.stringValue.characters.count > 0) {
+                enableSegmentedControl(control: segmentedControl, enable: true)
             } else {
-                
-                for segment in 0 ..< segmented_control.segmentCount {
-                    
-                    segmented_control.setEnabled(false, forSegment: segment)
-                    segmented_control.setSelected(false, forSegment: segment)
-                    
-                }
+                enableSegmentedControl(control: segmentedControl, enable: false)
+            }
+        } else {
+            if (dependentPopUp.indexOfSelectedItem > 0 && dependentText.stringValue.characters.count > 0) {
+                enableSegmentedControl(control: segmentedControl, enable: true)
+            } else {
+                enableSegmentedControl(control: segmentedControl, enable: false)
+            }
+        }
+    }
+    
+    private static func enableSegmentedControl(control: NSSegmentedControl, enable: Bool) {
+        for segment in 0 ..< control.segmentCount {
+            control.setEnabled(enable, forSegment: segment)
+            if (!enable) {
+                control.setSelected(enable, forSegment: segment)
             }
         }
     }

@@ -44,13 +44,14 @@ open class HttpRequest: NSObject, URLSessionDelegate {
         let session = Foundation.URLSession(configuration: configuration, delegate: self, delegateQueue: OperationQueue.main)
         
         //Create the task with the request, and prepare to log result/errors to console
+        
         let task = session.dataTask(with: request as URLRequest, completionHandler: {
             (data, response, error) -> Void in
             
             if let httpResponse = response as? HTTPURLResponse {
-                
-                self.httpStatus(status: httpResponse)
-                
+                DispatchQueue.main.async(execute: {
+                    self.httpStatus(status: httpResponse)
+                })
             }
         })
         
