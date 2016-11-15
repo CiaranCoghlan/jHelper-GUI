@@ -69,7 +69,7 @@ class HelperController: NSViewController, NSTextFieldDelegate {
         }
     }
 
-    // Manage window position, and timeout based on window type selection
+    // Enable majority of controls once a window type is selected
     @IBAction func WindowTypeChanged(_ sender: NSPopUpButton) {
         ManageControls.segmentedControl(LockHUD, dependentPopUp: sender)
         ManageControls.textField(ScriptName, dependentPopUp: sender)
@@ -145,9 +145,6 @@ class HelperController: NSViewController, NSTextFieldDelegate {
     
     override func viewWillAppear() {
         let blue = NSColor(red: 91/255.0, green: 105/255.0, blue: 130/255.0, alpha: 1.0)
-        //let darkBlue = NSColor(red: 44/255.0, green: 58/255.0, blue: 82/255.0, alpha: 1.0)
-        //let white = NSColor(red: 244/255.0, green: 246/255.0, blue: 249/255.0, alpha: 1.0)
-        //let lightBlue = NSColor(red: 158/255.0, green: 184/255.0, blue: 213/255.0, alpha: 1.0)
         self.view.layer?.backgroundColor = blue.cgColor
     }
     
